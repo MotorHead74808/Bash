@@ -1,0 +1,10 @@
+#!/bin/bash
+
+gcc -Wall $1.c - $1;
+read -p "Did the program compile right?" yn;
+case $yn in
+  [Yy]* ) clear
+          echo "Program Live"
+          ./$1;;
+  [Nn]* ) exit;;
+esac
